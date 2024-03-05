@@ -1,14 +1,14 @@
 pipeline{ 
 	agent any
 	stages{
-		stage{
-			steps("scm"){
+		stage("scm"){
+			steps{
 				git "https://github.com/Lohithreddy-k/maven.git"
 				git branch: 'feature', url: 'https://github.com/Lohithreddy-k/maven.git'
 				}
 			}
-		stage{
-			steps("run"){
+		stage("run"){
+			steps{
 				sh "mvn clean install"
 				sh "sh demo.sh"
 				}
