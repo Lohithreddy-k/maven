@@ -3,7 +3,7 @@ piprline{
 	stages{
 		stage{
 			steps("scm"){
-				git "https://github.com/Lohithreddy-k/maven.git"
+				git branch: 'master', url: "https://github.com/Lohithreddy-k/maven.git"
 				git branch: 'feature', url: 'https://github.com/Lohithreddy-k/maven.git'
 				}
 			}
